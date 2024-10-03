@@ -7,6 +7,23 @@ while nama_user == "":
 # mengimpor modul random agar posisi tupai dapat menjadi random
 import random
 
+# method untuk membuat kata sambutan kepada pengguna
+class method:
+    def __init__(self, nama, departemen):
+        self.nama = nama
+        self.departemen = departemen
+    
+    def intro(self):
+        style = "=" * (len(self.nama) + len(self.departemen) + 32)
+        print(style)
+        print("GAMES MENEBAK POSISI TUPAI".center(len(style)))
+        print(f"Selamat datang {self.nama} dari departemen {self.departemen}")
+        print(style)
+
+obj = method(input("Masukkan nama anda :"), input("Masukkan Departemen anda :"))
+
+obj.intro()
+
 # kode inti permainan menebak posisi tupai
 while True:
     # kode pendefinisian dan pembukaan permainan
